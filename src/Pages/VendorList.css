@@ -1,0 +1,37 @@
+.listing-page-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* --- THE MAIN GRID LAYOUT (Desktop) --- */
+.listing-content {
+  display: grid;
+  /* 1 part for sidebar (around 300px), 3 parts for content grid */
+  grid-template-columns: 280px 1fr; 
+  gap: 30px;
+}
+
+.vendor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding-top: 20px; /* Space above the first row of cards */
+}
+
+/* Mobile Responsiveness: Sidebar collapses */
+@media screen and (max-width: 992px) {
+  .listing-content {
+    /* Stack sidebar and content vertically */
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .filter-sidebar {
+    position: static; /* No longer sticky on mobile */
+    top: auto;
+    width: 100%;
+  }
+
+  /* Optional: Make sidebar open/close with a button for mobile (advanced) */
+}

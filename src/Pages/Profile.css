@@ -1,0 +1,177 @@
+.profile-page-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile-header h1 {
+  color: var(--primary-brand);
+  font-size: 36px;
+  margin-bottom: 5px;
+}
+
+.profile-header p {
+  color: #666;
+}
+
+/* --- Content Layout --- */
+.profile-content-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar fixed width, Main area expands */
+  gap: 30px;
+}
+
+/* --- Sidebar Navigation --- */
+.profile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.profile-nav .nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.profile-nav .nav-link:last-of-type {
+  border-bottom: none;
+}
+
+.profile-nav .nav-link:hover, .profile-nav .nav-link.active {
+  color: var(--primary-brand);
+  font-weight: 700;
+}
+
+.btn-logout {
+  background: none;
+  border: none;
+  color: #DC3545; /* Bootstrap Red */
+  text-align: left;
+  padding: 15px 0 0 0;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  border-top: 1px solid #eee;
+}
+
+/* --- Main Content --- */
+.profile-main-area h2 {
+  font-size: 28px;
+  color: var(--text-main);
+  margin-top: 0;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- Booking Card --- */
+.booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-left: 5px solid var(--primary-brand); /* Brand accent */
+}
+
+.booking-details {
+  flex-grow: 1;
+}
+
+.booking-id {
+  font-size: 12px;
+  color: #888;
+}
+
+.vendor-title {
+  font-size: 18px;
+  color: var(--text-main);
+  margin: 5px 0;
+}
+
+.booking-info {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Status Badges */
+.booking-status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  width: 90px;
+}
+
+.status-confirmed { background-color: #D4EDDA; color: #155724; } /* Green */
+.status-completed { background-color: #CCE5FF; color: #004085; } /* Blue */
+.status-cancelled { background-color: #F8D7DA; color: #721C24; } /* Red */
+
+.btn-view {
+  background-color: var(--accent-gold);
+  color: var(--text-main);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-view:hover {
+  opacity: 0.9;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 768px) {
+  .profile-content-layout {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+
+  .profile-nav {
+    flex-direction: row; /* Horizontal tabs on mobile */
+    overflow-x: auto;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+    gap: 15px;
+  }
+  
+  .profile-nav .nav-link {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+
+  .btn-logout {
+    display: none; /* Hide logout button from sidebar on mobile */
+  }
+
+  .booking-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

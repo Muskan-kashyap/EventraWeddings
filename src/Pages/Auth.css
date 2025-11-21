@@ -1,0 +1,141 @@
+.auth-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 70px); /* Full viewport height minus navbar */
+  padding: 40px 20px;
+  background-color: var(--bg-color); /* Cream background */
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  border-top: 6px solid var(--primary-brand);
+}
+
+.auth-title {
+  font-size: 28px;
+  color: var(--primary-brand);
+  margin-bottom: 5px;
+}
+
+.auth-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* --- Social Login Buttons --- */
+.social-login-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.google-btn {
+  background-color: #DB4437; /* Google Red */
+  color: white;
+  border: none;
+}
+
+.facebook-btn {
+  background-color: #4267B2; /* Facebook Blue */
+  color: white;
+  border: none;
+}
+
+.social-btn:hover {
+  opacity: 0.9;
+}
+
+/* --- Separator --- */
+.divider-text {
+  margin: 20px 0;
+  color: #aaa;
+  font-size: 14px;
+  position: relative;
+}
+
+.divider-text::before, .divider-text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #eee;
+}
+
+.divider-text::before { left: 0; }
+.divider-text::after { right: 0; }
+
+
+/* --- Form Fields --- */
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.auth-form input:focus {
+  border-color: var(--accent-gold);
+  outline: none;
+}
+
+.btn-primary-auth {
+  width: 100%;
+  background-color: var(--primary-brand);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.btn-primary-auth:hover {
+  background-color: #8E1212; /* Darker Crimson */
+}
+
+/* --- Toggle & Forgot Links --- */
+.toggle-prompt {
+  font-size: 14px;
+  color: #666;
+  margin-top: 25px;
+}
+
+.toggle-link {
+  color: var(--primary-brand);
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.forgot-link {
+  color: #888;
+  font-size: 13px;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}

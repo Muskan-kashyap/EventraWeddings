@@ -1,0 +1,260 @@
+/* --- Global Container --- */
+.vdp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- Gallery Section --- */
+.gallery-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin-bottom: 30px;
+  max-height: 500px; /* Limit height of the gallery */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.main-photo-wrapper {
+  overflow: hidden;
+}
+
+.main-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.thumbnail-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.thumbnail-photo:hover {
+  opacity: 1;
+}
+
+
+/* --- Content Layout --- */
+.vdp-content-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 main, 1/3 sidebar */
+  gap: 40px;
+}
+
+.vdp-main-content h1 {
+  font-size: 36px;
+  margin-top: 0;
+  color: var(--primary-brand);
+}
+
+.vdp-main-content h2 {
+  font-size: 24px;
+  color: var(--text-main);
+  border-left: 4px solid var(--accent-gold);
+  padding-left: 10px;
+}
+
+.vdp-rating {
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFC107;
+}
+
+.star-icon {
+  color: var(--accent-gold);
+}
+
+.vdp-location {
+  color: #666;
+  font-size: 14px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  color: var(--text-main);
+}
+
+.feature-value {
+  font-weight: 600;
+  color: var(--primary-brand);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 30px 0;
+}
+
+
+/* --- Inquiry Widget (Sidebar) --- */
+.inquiry-widget {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  height: fit-content;
+  
+  /* Make it sticky */
+  position: sticky;
+  top: 90px; 
+}
+
+.inquiry-widget h3 {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+  color: var(--primary-brand);
+  text-align: center;
+}
+
+.widget-price {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  display: block;
+  font-size: 14px;
+  color: #888;
+}
+
+.price-value {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--primary-brand);
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.btn-primary {
+  width: 100%;
+  background-color: var(--vendor-action); /* Royal Purple */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #55147C;
+}
+
+.contact-info {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 15px;
+  color: #666;
+}
+
+/* --- Mobile Responsiveness --- */
+@media screen and (max-width: 992px) {
+  .gallery-section {
+    grid-template-columns: 1fr;
+    max-height: none;
+  }
+  
+  .vdp-content-layout {
+    grid-template-columns: 1fr; /* Stack main content and sidebar */
+    gap: 30px;
+  }
+  
+  .inquiry-widget {
+    position: static; /* Sidebar becomes part of the flow on mobile */
+  }
+  
+  .thumbnail-grid {
+    grid-template-columns: repeat(4, 1fr); /* 4 small thumbs side-by-side */
+  }
+}
+
+.vdp-main-content h2 {
+  font-size: 24px;
+  color: var(--text-main);
+  /* The Fix: Gold Accent Bar */
+  border-left: 4px solid var(--accent-gold); 
+  padding-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.widget-price {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  display: block;
+  font-size: 14px;
+  color: #888;
+}
+
+.price-value {
+  font-size: 30px; /* Make the price large */
+  font-weight: 700;
+  color: var(--primary-brand); /* Deep Crimson Red */
+}
+
+/* Updated Inquiry Button Styling */
+.btn-primary-inquiry { /* New class name from JSX update */
+  width: 100%;
+  background-color: var(--vendor-action); /* Royal Purple */
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary-inquiry:hover {
+  background-color: #55147C;
+}
+
+/* --- Added Feature Grid Checkmarks (matches reference image) --- */
+.features-section {
+  padding-left: 15px; /* Creates space for the gold bar */
+}
+
+.feature-grid div {
+  /* Green Checkmark visual */
+  padding-left: 20px;
+  position: relative;
+}
+
+.feature-grid div::before {
+  content: "✅";
+  position: absolute;
+  left: 0;
+}

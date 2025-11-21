@@ -1,0 +1,18 @@
+:root {
+  --primary-brand: #A52A2A; 
+  
+  --text-main: #2C2C2C;
+  
+  --accent-gold: #FFC107; 
+  
+  --vendor-action: #6A1B9A; 
+
+  --navbar-height: 70px;
+  --bg-color: #FFFDF7; 
+}
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-main);
+}

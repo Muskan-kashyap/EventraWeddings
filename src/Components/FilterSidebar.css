@@ -1,0 +1,70 @@
+.filter-sidebar {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  height: fit-content; /* Only takes up necessary height */
+  position: sticky; /* Sticky on desktop */
+  top: 90px; /* Aligns below the Navbar */
+}
+
+/* Header & Reset Button */
+.sticky-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--accent-gold); /* Gold separator */
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.sticky-header h3 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 20px;
+}
+
+.reset-btn {
+  background: none;
+  border: none;
+  color: var(--primary-brand);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Individual Filter Group Styles */
+.filter-group {
+  margin-bottom: 25px;
+  padding: 5px 0;
+}
+
+.filter-group h4 {
+  font-size: 16px;
+  color: var(--primary-brand);
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Styles for Checkboxes and Radios */
+.checkbox-label, .radio-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-main);
+  cursor: pointer;
+  text-align: left;
+}
+
+.checkbox-label input, .radio-label input {
+  margin-right: 8px;
+  accent-color: var(--primary-brand); /* Uses brand color for selected state */
+}
+
+/* Scroll area for long filter lists */
+.filter-scroll-area {
+  max-height: 70vh; /* Limits height to screen size */
+  overflow-y: auto;
+  padding-right: 10px; /* Space for scrollbar */
+}
