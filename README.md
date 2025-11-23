@@ -1,4 +1,5 @@
-# 💍 Eventra Weddings - The Premier Wedding & Event Services Platform for Bihar==>https://eventra-weddings-front-end-mryx.vercel.app/
+# 💍 Eventra Weddings - The Premier Wedding & Event Services Platform for Bihar==>https://eventra-weddings.vercel.app/
+==>Write Dashboard to see changes
 
 Eventra Weddings is a comprehensive, full-stack ready web platform designed to connect customers with local wedding and event service vendors (Venues, Decorators, Photographers, etc.) specifically within the Bihar region.
 
